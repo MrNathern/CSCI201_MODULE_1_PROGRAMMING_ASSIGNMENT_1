@@ -1,5 +1,10 @@
 #ifndef NOTEBOOK_H
 #define NOTEBOOK_H
 //class is defined here 
-//see the puml(plant uml) file or the .svg(image) for the class diagram that describes the class you need to create.
+class Notebook {
+private:
+    std::string coverDesign, colorType, paperColor, pageFormat, paperType;
+    int numberOfPages;
+    double notebookHeight, notebookWidth;
+}
 #endif
