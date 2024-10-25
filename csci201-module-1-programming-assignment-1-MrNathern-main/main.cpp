@@ -22,11 +22,41 @@ is specified in the diagram.
 #include <vector>
 #include "notebook.h"
 
-
 int main()
 {
-    main;
-    std::cout << "Hello World!" ;
+    //Variables
+    std::string coverDesign, colorType, paperColor, pageFormat, paperType;
+    int numberOfPages;
+    double notebookHeight, notebookWidth;
+
+    //User inputs
+    std::cout << "Enter the name of the cover color or design:" ;
+    std::getline(std::cin, coverDesign);
+
+    std::cout << "Enter the cover type: ";
+    std::getline(std::cin, coverType);
+
+    std::cout << "Enter the paper color: ";
+    std::getline(std::cin, paperColor);
+
+    std::cout << "Enter the notebook format: ";
+    std::getline(std::cin, pageFormat);
+
+    std::cout << "Enter the type of paper: ";
+    std::getline(std::cin, paperType);
+
+    std::cout << "Enter the number of pages: ";
+    std::cin >> numberOfPages;
+
+    std::cout << "Enter the notebook height: ";
+    std::cin >> notebookHeight;
+
+    std::cout << "Enter the notebook width: ";
+    std::cin >> notebookWidth;
+
+
+    //Output
+    
     return 0;
 }
 
