@@ -56,7 +56,7 @@ int main()
 
 
     //Output
-    
+
     return 0;
 }
 
