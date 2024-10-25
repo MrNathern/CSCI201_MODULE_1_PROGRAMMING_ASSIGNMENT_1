@@ -21,6 +21,8 @@ is specified in the diagram.
 #include <fstream>
 #include <vector>
 #include "notebook.h"
+#include "main.cpp"
+#include "notebook.cpp"
 
 int main()
 {
