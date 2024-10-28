@@ -1,6 +1,6 @@
 /* Program name: M01 Programming Assignment 1
 * Author: Ronald Hernandez
-* Date last updated: 10/25/2024
+* Date last updated: 10/28/2024
 * Purpose: For this assignment you make a class that describes a notebook.
 The notebook will have a width and height that are doubles.
 The number of pages will be in an int. There will be strings describing
@@ -21,16 +21,14 @@ is specified in the diagram.
 #include <fstream>
 #include <vector>
 #include "notebook.h"
-#include "main.cpp"
-#include "notebook.cpp"
+
 
 int main()
-{
-    //Variables
-    std::string coverDesign, colorType, paperColor, pageFormat, paperType;
+{   
+    std::string coverDesign, coverType, paperColor, pageFormat, paperType;
     int numberOfPages;
     double notebookHeight, notebookWidth;
-
+    
     //User inputs
     std::cout << "Enter the name of the cover color or design:" ;
     std::getline(std::cin, coverDesign);
@@ -46,9 +44,26 @@ int main()
 
     std::cout << "Enter the type of paper: ";
     std::getline(std::cin, paperType);
-
-    std::cout << "Enter the number of pages: ";
-    std::cin >> numberOfPages;
+    while (true){
+        std::cout << "Enter the number of pages: ";
+        std::cin >> numberOfPages;
+        if (std::cin.fail()) {
+            std::cin.clear(); 
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
+            std::cout << "You entered sometheing that is a not a number!" << std::endl;
+        } else if(numberOfPages = 0) {
+            std::cin.clear(); 
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
+            std::cout << "Please enter a number greater than 0." << std::endl;
+        } else if (numberOfPages < 0) {
+            std::cin.clear(); 
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
+            std::cout << "Please enter a number greater than 0." << std::endl;
+        } else {
+            break;
+        }
+    }
+    
 
     std::cout << "Enter the notebook height: ";
     std::cin >> notebookHeight;
@@ -58,7 +73,13 @@ int main()
 
 
     //Output
-
+    std::cout << "Here is your notebook: " << std::endl;
+    std::cout << "Dimensions: " << notebookHeight << "x" << notebookWidth << std::endl;
+    std::cout << "Paper Type: " << paperType << std::endl;
+    std::cout << "Page Color: " << paperColor << std::endl;
+    std::cout << "Page Format: " << pageFormat << std::endl;
+    std::cout << "Cover Type: " << coverType << std::endl;
+    std::cout << "Cover Design: " << coverDesign << std::endl;
     return 0;
 }
 

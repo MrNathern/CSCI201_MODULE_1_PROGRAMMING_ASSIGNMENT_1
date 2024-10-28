@@ -6,5 +6,5 @@ private:
     std::string coverDesign, colorType, paperColor, pageFormat, paperType;
     int numberOfPages;
     double notebookHeight, notebookWidth;
-}
+};
 #endif
