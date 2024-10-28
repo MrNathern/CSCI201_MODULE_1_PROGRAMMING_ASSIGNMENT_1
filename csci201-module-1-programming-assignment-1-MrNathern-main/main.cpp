@@ -74,7 +74,7 @@ int main()
 
     //Output
     std::cout << "Here is your notebook: " << std::endl;
-    std::cout << "Dimensions: " << notebookHeight << "x" << notebookWidth << std::endl;
+    std::cout << "Dimensions: " << notebookWidth << "x" << notebookHeight << std::endl;
     std::cout << "Paper Type: " << paperType << std::endl;
     std::cout << "Page Color: " << paperColor << std::endl;
     std::cout << "Page Format: " << pageFormat << std::endl;
